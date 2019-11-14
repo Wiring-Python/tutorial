@@ -57,14 +57,14 @@ while True:
     # draw the text onto the surface
     screen.blit(text_surface_obj, text_rect_obj)
     if draw.toggle:
-        draw.dx += 5
+        draw.dx += 10
         if draw.dx == 500:
             draw.dx = 0
             draw.toggle = False
 
     screen.blit(draw.card, (draw.x + draw.dx, draw.y + draw.dy))
     if flip.toggle:
-        flip.angle = flip.angle + 3
+        flip.angle = flip.angle + 6
         if flip.angle == 30:
             if flip.FB:
                 flip.card = b_image
@@ -98,3 +98,6 @@ while True:
 
     pygame.display.update()
     fpsClock.tick(FPS)
+
+
+
